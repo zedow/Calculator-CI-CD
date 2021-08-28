@@ -38,5 +38,5 @@ jobs:
           # Artifact name
           name: Artifact
           # A file, directory or wildcard pattern that describes what to upload
-          path: /home/runner/work/Calculator/Calculator/bin/Release/netcoreapp3.1/Calculator.dll
+          path: /home/runner/work/Calculator-CI-CD/Calculator-CI-CD/Calculator/bin/Debug/netcoreapp3.1/publish/
           # The desired behavior if no files are found using the provided path.
