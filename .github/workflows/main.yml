@@ -28,10 +28,20 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.0
+          dotnet-version: "3.1.x"
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore
       - name: Test
         run: dotnet test --no-build --verbosity normal
+      - name: Publish
+        run: dotnet publish
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          # Artifact name
+          name: Artifact
+          # A file, directory or wildcard pattern that describes what to upload
+          path: /Calculator/bin/Release/netcoreapp3.1
+          # The desired behavior if no files are found using the provided path.
