@@ -18,7 +18,7 @@ namespace Calculator.Tests
 
             var result = calculator.Addition(1, 1);
 
-            Assert.AreEqual(2,result);
+            Assert.AreEqual(3,result);
         }
 
         [Test]
